@@ -1,0 +1,53 @@
+###
+POST http://localhost:3000/auth/reset
+Content-Type: application/json
+
+{
+"email":"love22891@live.fr"
+}
+###
+GET http://localhost:3000/users
+###
+GET http://localhost:3000/users/6062ded4d2b10a3704197ea7
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+   "nom":"admin", 
+"prenom":"admin",
+"email":"rimeh.berrichi@esprit.tn",
+"password":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+"role":"admin",
+"verified":true,
+"accepted":true
+
+}
+
+
+###
+DELETE http://localhost:3000/users/606382ce0a5a14156cde6cb4
+###
+patch http://localhost:3000/users/606299dc5595f52f74039143
+Content-Type: application/json
+
+{
+"password":"ghassen"
+}
+###
+GET http://localhost:3000/users/6062ded4d2b10a3704197ea7
+###
+GET http://localhost:3000/profile/current
+###
+POST http://localhost:3000/message
+Content-Type: application/json
+
+{
+"whoSend":"6063b1da3bfe475e64536de8", 
+"toSend":"6063b97dfd9195404c51ccad",
+"content":"messageee "
+
+
+}
+###
+GET http://localhost:3000/message/tosend/6063b1da3bfe475e64536de8
